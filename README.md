@@ -1,7 +1,7 @@
 # mechacar-statistical-analysis
 
 # Overview
-The purpose of this project is to run statistical analyses for AutosRUs's prototype MechaCar, which is experiecing some problems in production.
+The purpose of this project is to run statistical analyses on AutosRUs's prototype MechaCar, which is experiencing some production challenges. 
 
 # Results
 
@@ -15,17 +15,15 @@ A linear regression was performed to examine which of the five variables -- vehi
 **Equation Coefficients:**
 
 |                  | Estimate   | Std.      | t value | Pr(>\|t\|) | Significance |
-|------------------|------------|-----------|---------|------------|-----|
-| (Intercept)      | -1.040e+02 | 1.585e+01 | -6.559  | 5.08e-08   | *** |
-| vehicle_length   | 6.267e+00  | 6.553e-01 | 9.563   | 2.60e-12   | *** |
-| vehicle_weight   | 1.245e-03  | 6.890e-04 | 1.807   | 1.807      | .   |
-| spoiler_angle    | 6.877e-02  | 6.653e-02 | 1.034   | 0.3069     |     |
-| ground_clearance | 3.546e+00  | 5.412e-01 | 6.551   | 5.21e-08   | *** |
-| AWD              | -3.411e+00 | 2.535e+00 | -1.346  | 0.1852     |     | 
+|------------------|------------|-----------|---------|------------|--------------|
+| (Intercept)      | -1.040e+02 | 1.585e+01 | -6.559  | 5.08e-08   | ***          |
+| vehicle_length   | 6.267e+00  | 6.553e-01 | 9.563   | 2.60e-12   | ***          |
+| vehicle_weight   | 1.245e-03  | 6.890e-04 | 1.807   | 1.807      | .            |
+| spoiler_angle    | 6.877e-02  | 6.653e-02 | 1.034   | 0.3069     |              |
+| ground_clearance | 3.546e+00  | 5.412e-01 | 6.551   | 5.21e-08   | ***          |
+| AWD              | -3.411e+00 | 2.535e+00 | -1.346  | 0.1852     |              |
 
 - Multiple R-squared:  0.7149
-
-- Adjusted R-squared:  0.6825
 
 - p-value: 5.35e-11
 
@@ -35,18 +33,22 @@ Based on the Pr(>|t|) values of the results, the vehicle length and the ground c
 
 **Is the slope of the linear model considered to be zero? Why or why not?**
 
-The slope of the linear model cannot be considered zero, because of the two variables that have have a positive correlation with the MPG. A zero slope would indicate that there is no significant correlation between the MPG and each of the five variables.
+The slope of the linear model cannot be considered zero, because of the two variables that have a positive correlation with the MPG. A zero slope would indicate that there is no significant linear correlation between the MPG and each of the five variables.
 
 **Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?**
 
+Based on the R-squared value and the p-value of the linear model, the model appears to fit the data rather well, though it is not a perfect fit.
 
+The R-squared value, also known as the coefficient of determination, describes the amount of variance in the response variable (y) in relation to the five predictor variables (vehicle length, vehicle weight, spoiler angle, ground clearance, and AWD). The closer to 1 the R-squared value is, the better the predictor variables are able to determine the response variable. In this case, the R-squared value is 0.7149, which means that the linear model fits the data with roughly 70% accuracy. 
+
+The p-value shows whether or not the values of the predictor variables have any significant correlation the values of the response variable. If the p-value is 0.05 or greater, then there is insufficient evidence to conclude that the predictor variables have any significant correlation to the response variable. The p-value of the linear regression as a whole for the MechaCar is extremely small, so it is reasonable to conclude that there is a strong correlation between the predictor variables and the response variable.
 
 ## Summary Statistics on Suspension Coils
-Summary of All Lots
+**Summary of All Lots**
 
 ![Total Summary](Images/total_summary.PNG)
 
-Summary of Individual Lots
+**Summary of Individual Lots**
 
 ![Lot Summary](Images/lot_summary.PNG)
 
