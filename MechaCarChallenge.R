@@ -18,11 +18,6 @@ summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle +
              ground_clearance + AWD, data=mecha_df))
 
 
-model <- lm(qsec ~ hp,mecha_df) #create linear model
-> yvals <- model$coefficients['hp']*mecha_df$hp +
-  model$coefficients['(Intercept)']
-
-
 # Module 15 Challenge Deliverable 2 --------------------------------------------
 
 # 2. In your MechaCarChallenge.RScript, import and read in the 
