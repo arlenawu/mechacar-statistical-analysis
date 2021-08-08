@@ -44,6 +44,8 @@ The R-squared value, also known as the coefficient of determination, describes t
 The p-value shows whether or not the values of the predictor variables have any significant correlation the values of the response variable. If the p-value is 0.05 or greater, then there is insufficient evidence to conclude that the predictor variables have any significant correlation to the response variable. The p-value of the linear regression as a whole for the MechaCar is extremely small, so it is reasonable to conclude that there is a strong correlation between the predictor variables and the response variable.
 
 ## Summary Statistics on Suspension Coils
+The mean, median, variance, and standard deviation of the pressure exerted on the MechaCar prototypes' suspension coils were determined from the raw data provided. Pressure was measured in units of pounds per square inch (PSI).
+
 **Summary of All Lots**
 
 ![Total Summary](Images/total_summary.PNG)
@@ -52,41 +54,42 @@ The p-value shows whether or not the values of the predictor variables have any 
 
 ![Lot Summary](Images/lot_summary.PNG)
 
-The design specifications of the MechaCar note that the variance of the suspension coils must not exceed 100 pounds per square inch. Although Lots 1 and 2 meet this requirement, Lot 3 greatly exceeds the limit. This means that there is a great deal of inconsistency in the prototypes from Lot 3 that is affecting the amount of pressure being placed on the suspension coils.
+The design specifications of the MechaCar note that the variance of the suspension coils must not exceed 100 PSI. Although Lots 1 and 2 meet this requirement, Lot 3 greatly exceeds the limit. This means that there is a great deal of inconsistency in the prototypes from Lot 3 that is affecting the amount of pressure being placed on the suspension coils.
 
 ## T-Tests on Suspension Coils
+One-sample t-tests were run on the PSI values of the MechaCar prototypes' suspension coils in order to determine whether the mean of the sample data deviates from the ideal mean, 1500 PSI. T-tests were run on all the data together, and individually on each lot.
 
-- All Lots
+The null hypothesis being tested is that the mean PSI is equal to the ideal mean. The results of the t-tests are as follows.
+
+- All Lots Together
 	- t = -1.8931
-	- df = 149
+	- degrees of freedom (df) = 149
 	- p-value = 0.06028
-	- alternative hypothesis: true mean is not equal to 1500
-	- 95 percent confidence interval: 1497.507 1500.053
+	- 95 percent confidence interval: 1497.507, 1500.053
 	- mean of x: 1498.78
 
 - Lot 1
 	- t = 0
-	- df = 49
+	- degrees of freedom (df) = 49
 	- p-value = 1
-	- alternative hypothesis: true mean is not equal to 1500
-	- 95 percent confidence interval: 1499.719 1500.281
+	- 95 percent confidence interval: 1499.719, 1500.281
 	- mean of x: 1500
 
 - Lot 2
 	- t = 0.51745
-	- df = 49
+	- degrees of freedom (df) = 49
 	- p-value = 0.6072
-	- alternative hypothesis: true mean is not equal to 1500
-	- 95 percent confidence interval: 1499.423 1500.977
+	- 95 percent confidence interval: 1499.423, 1500.977
 	- mean of x: 1500.2
 
 - Lot 3
 	- t = -2.0916
-	- df = 49
+	- degrees of freedom (df) = 49
 	- p-value = 0.04168
-	- alternative hypothesis: true mean is not equal to 1500
-	- 95 percent confidence interval: 1492.431 1499.849
+	- 95 percent confidence interval: 1492.431, 1499.849
 	- mean of x: 1496.14
+
+The t-tests for lot 1, lot 2, and all the lots together all have p-values well above 0.05, which means that the null hypothesis cannot be rejected, and it wuold be reasonable to assume that their mean PSI values are equal to the ideal mean of 1500 PSI. The p-value for the t-test for lot 3, however is below 0.05, though it is still relatively close. While the null hypothesis cannot be completely rejected in this instance, when compared to the other tests, it is still a strong indication of manufacturing defects in lot 3, and should be investigated.
 
 ## Study Design: MechaCar vs Competition
 
