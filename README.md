@@ -1,7 +1,7 @@
 # mechacar-statistical-analysis
 
 # Overview
-
+The purpose of this project is to run statistical analyses for AutosRUs's prototype MechaCar, which is experiecing some problems in production.
 
 # Results
 
@@ -34,6 +34,43 @@ Does this linear model predict mpg of MechaCar prototypes effectively? Why or wh
 
 
 ## Summary Statistics on Suspension Coils
+suspension coils must not exceed 100 pounds per square inch Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
+
+## T-Tests on Suspension Coils
+
+- All Lots
+	- t = -1.8931
+	- df = 149
+	- p-value = 0.06028
+	- alternative hypothesis: true mean is not equal to 1500
+	- 95 percent confidence interval: 1497.507 1500.053
+	- mean of x: 1498.78
+
+- Lot 1
+	- t = 0
+	- df = 49
+	- p-value = 1
+	- alternative hypothesis: true mean is not equal to 1500
+	- 95 percent confidence interval: 1499.719 1500.281
+	- mean of x: 1500
+
+- Lot 2
+	- t = 0.51745
+	- df = 49
+	- p-value = 0.6072
+	- alternative hypothesis: true mean is not equal to 1500
+	- 95 percent confidence interval: 1499.423 1500.977
+	- mean of x: 1500.2
+
+- Lot 3
+	- t = -2.0916
+	- df = 49
+	- p-value = 0.04168
+	- alternative hypothesis: true mean is not equal to 1500
+	- 95 percent confidence interval: 1492.431 1499.849
+	- mean of x: 1496.14
+
+## Study Design: MechaCar vs Competition
 
 
 # Summary
