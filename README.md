@@ -6,11 +6,6 @@ The purpose of this project is to run statistical analyses for AutosRUs's protot
 # Results
 
 ## Linear Regression to Predict Miles per Gallon (MPG)
-
-Coefficients:
-     (Intercept)    vehicle_length    vehicle_weight     spoiler_angle  ground_clearance               AWD  
-      -1.040e+02         6.267e+00         1.245e-03         6.877e-02         3.546e+00        -3.411e+00 
-
 Coefficients:
                    Estimate Std. Error t value Pr(>|t|)    
 (Intercept)      -1.040e+02  1.585e+01  -6.559 5.08e-08 ***
@@ -28,13 +23,24 @@ F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
 
 Based on the Pr(>|t|) values of the results, the vehicle length and the ground clearance (as well as the intercept) of each vehicle is unlikely to provide a random amount of variance to the MPG values in a linear regression model.
 
-Is the slope of the linear model considered to be zero? Why or why not?
+**Is the slope of the linear model considered to be zero? Why or why not?**
 
-Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+
+
+**Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?**
+
 
 
 ## Summary Statistics on Suspension Coils
-suspension coils must not exceed 100 pounds per square inch Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
+Summary of All Lots
+
+![Total Summary](Images/total_summary.PNG)
+
+Summary of Individual Lots
+
+![Lot Summary](Images/lot_summary.PNG)
+
+The design specifications of the MechaCar note that the variance of the suspension coils must not exceed 100 pounds per square inch. Although Lots 1 and 2 meet this requirement, Lot 3 greatly exceeds the limit. This means that there is a great deal of inconsistency in the prototypes from Lot 3 that is affecting the amount of pressure being placed on the suspension coils.
 
 ## T-Tests on Suspension Coils
 
